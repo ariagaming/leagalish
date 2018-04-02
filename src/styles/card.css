@@ -1,0 +1,19 @@
+.card {
+    min-height: 300px;
+    min-width: 215px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.card--image img {
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 10px;
+}

@@ -1,0 +1,109 @@
+html,
+body,
+#root,
+.board-container {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgba(150, 255, 150, 0.5);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.board-container {
+  position: relative;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  background: white;
+  z-index: 9999;
+  border-left: 2px solid brown;
+}
+
+.flex-item {
+  height: 100%;
+  flex: 1 0;
+  background: white;
+  border-left: 1px solid brown;
+  transition: all 500ms linear;
+}
+
+.new-item {
+  /* 0 does not work so we have to use a small number */
+  /* Start our small */
+  flex: 0.00001;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-animation: flexGrow 500ms ease forwards;
+  -o-animation: flexGrow 500ms ease forwards;
+  animation: flexGrow 500ms ease forwards;
+}
+
+@-webkit-keyframes flexGrow {
+  to {
+    flex: 1;
+  }
+}
+
+@-o-keyframes flexGrow {
+  to {
+    flex: 1;
+  }
+}
+
+@keyframes flexGrow {
+  to {
+    flex: 1;
+  }
+}
+
+@-webkit-keyframes flexShrink {
+  to {
+    flex: 0.01;
+    flex: 0.00001;
+  }
+}
+
+@-o-keyframes flexShrink {
+  to {
+    flex: 0.01;
+    flex: 0.00001;
+  }
+}
+
+@keyframes flexShrink {
+  to {
+    flex: 0.01;
+    flex: 0.00001;
+  }
+}
+
+.action-log {
+  width: 10px;
+  height: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.action-log * {
+  visibility: hidden;
+}
+
+.action-log:hover {
+  width: 250px;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.action-log:hover * {
+  visibility: visible;
+}

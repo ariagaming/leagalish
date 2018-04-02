@@ -1,0 +1,23 @@
+{
+  "name": "hex-game",
+  "description": "A simple hex game",
+  "version": "0.0.62",
+  "port": 4000,
+  "dependencies": {
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-redux": "^5.0.7",
+    "react-svg-pan-zoom": "2.15.1",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "postbuild": "mv ./build ./docs",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
